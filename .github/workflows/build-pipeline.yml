@@ -1,0 +1,40 @@
+name: Build and Test Pipeline - Chinna ANjaneyulu Unnam
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start build message
+        run: echo "Starting build process..."
+
+      - name: Simulate compilation
+        run: sleep 3
+
+      - name: Build completion message
+        run: echo "Build completed successfully"
+
+      - name: Builder name
+        run: echo "Built by Anji"
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start test message
+        run: echo "Running automated tests..."
+
+      - name: Simulate test execution
+        run: sleep 2
+
+      - name: Print current date and time
+        run: date
+
+      - name: Test completion message
+        run: echo "All tests passed for Chinna Anjaneyulu"
